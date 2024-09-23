@@ -5,6 +5,7 @@ import 'package:readsphere_ieee/screens/congrats_screen.dart';
 import 'package:readsphere_ieee/widgets/custom_prefrences_row.dart';
 import 'package:readsphere_ieee/widgets/customcheckbox_list.dart';
 import 'package:readsphere_ieee/widgets/custom_button.dart';
+import 'package:screen_go/extensions/responsive_nums.dart';
 
 class PrefrencesPage6 extends StatefulWidget {
   PrefrencesPage6({super.key});
@@ -31,41 +32,43 @@ class _PrefrencesPage6State extends State<PrefrencesPage6> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SizedBox(
-        width: double.infinity,
-        child: Column(
-          children: [
-            CustomPrefrencesRow(
-              onpressed: () {
-                Get.back();
-              },
-              text: 'Choose the types of\n books you prefer',
-            ),
-            CustomcheckboxList(
-              isChecked: isCheckedPage6,
-              texts: page6Texts,
-              onSelectedOptionsChanged: (p0) {
-                setState(() {
-                  selectedAnswers = p0;
-                });
-              },
-            ),
-            const Spacer(flex: 1),
-            CustomButton(
+    return SizedBox(
+      width: double.infinity,
+      child: ListView(
+        shrinkWrap: true,
+        children: [
+          CustomPrefrencesRow(
+            onpressed: () {
+              Get.back();
+            },
+            text: 'Choose the types of\n books you prefer',
+          ),
+          CustomcheckboxList(
+            isChecked: isCheckedPage6,
+            texts: page6Texts,
+            onSelectedOptionsChanged: (p0) {
+              setState(() {
+                selectedAnswers = p0;
+              });
+            },
+          ),
+          const Spacer(flex: 1),
+          Container(
+            margin: EdgeInsets.only(right: 5.w, left: 5.w),
+            child: CustomButton(
                 onpressed: () {
-                  Navigator.pushNamed(context, PreferencesCongratsScreen.id);
+                  Get.to(() => const PreferencesCongratsScreen());
                 },
                 buttonColor: primaryColor,
-                textStyle: const TextStyle(
+                textStyle: TextStyle(
                     color: Colors.white,
-                    fontSize: 16,
+                    fontSize: 4.w,
                     fontFamily: 'IBMPlexSans'),
                 buttonText: 'Finish',
                 borderColor: primaryColor),
-            const Spacer(flex: 2),
-          ],
-        ),
+          ),
+          const Spacer(flex: 2),
+        ],
       ),
     );
   }

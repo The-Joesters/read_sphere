@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:readsphere_ieee/constant/constants.dart';
 
-
 import 'package:readsphere_ieee/widgets/custom_prefrences_row.dart';
 import 'package:readsphere_ieee/widgets/customcheckbox_list.dart';
 
@@ -33,7 +32,8 @@ class _PrefrencesPage4State extends State<PrefrencesPage4> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      child: Column(
+      child: ListView(
+        shrinkWrap: true,
         children: [
           CustomPrefrencesRow(
             onpressed: () {
@@ -52,18 +52,23 @@ class _PrefrencesPage4State extends State<PrefrencesPage4> {
           ),
           Image.asset(
             'assets/images/newideaimage.png',
-            height: 242.h,
-            width: 242.w,
+            height: 25.h,
+            width: 70.w,
           ),
-          CustomButton(
-              onpressed: () {
-                print(selectedAnswers);
-              },
-              buttonColor: primaryColor,
-              textStyle: const TextStyle(
-                  color: Colors.white, fontSize: 16, fontFamily: 'IBMPlexSans'),
-              buttonText: 'Continue',
-              borderColor: primaryColor),
+          Container(
+            margin: EdgeInsets.only(right: 5.w, left: 5.w),
+            child: CustomButton(
+                onpressed: () {
+                  print(selectedAnswers);
+                },
+                buttonColor: primaryColor,
+                textStyle: TextStyle(
+                    color: Colors.white,
+                    fontSize: 4.w,
+                    fontFamily: 'IBMPlexSans'),
+                buttonText: 'Continue',
+                borderColor: primaryColor),
+          ),
           const Spacer(flex: 1),
         ],
       ),

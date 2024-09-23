@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:readsphere_ieee/constant/constants.dart';
 
-
 import 'package:readsphere_ieee/widgets/custom_prefrences_row.dart';
 
 import 'package:readsphere_ieee/widgets/custom_button.dart';
@@ -19,42 +18,43 @@ class _PrefrencesPage5State extends State<PrefrencesPage5> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      child: Column(
+      child: ListView(
+        shrinkWrap: true,
         children: [
           CustomPrefrencesRow(
             onpressed: () {},
             text: 'Does this book seem\n interesting to you?',
           ),
-          const Spacer(
-            flex: 1,
+          SizedBox(
+            height: 10.h,
           ),
           Center(
             child: SizedBox(
-              height: 170.h, // يمكنك ضبط الارتفاع حسب حجم الصور
+              height: 20.h, // يمكنك ضبط الارتفاع حسب حجم الصور
               width: double.infinity, // يمكنك ضبط العرض أيضًا حسب الحاجة
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
                   Positioned(
-                    left: 30.w, // الصورة الأولى في اليسار
+                    left: 5.w, // الصورة الأولى في اليسار
                     child: const Image(
                       image: AssetImage('assets/images/book1.png'),
                     ),
                   ),
                   Positioned(
-                    left: 100.w, // الصورة الثانية تتداخل قليلاً مع الأولى
+                    left: 30.w, // الصورة الثانية تتداخل قليلاً مع الأولى
                     child: const Image(
                       image: AssetImage('assets/images/book2.png'),
                     ),
                   ),
                   Positioned(
-                    left: 170.w, // الصورة الثالثة تتداخل مع الثانية
+                    left: 50.w, // الصورة الثالثة تتداخل مع الثانية
                     child: const Image(
                       image: AssetImage('assets/images/book3.png'),
                     ),
                   ),
                   Positioned(
-                    left: 240.w, // الصورة الرابعة تتداخل مع الثالثة
+                    right: 5.w, // الصورة الرابعة تتداخل مع الثالثة
                     child: const Image(
                       image: AssetImage('assets/images/book4.png'),
                     ),
@@ -65,31 +65,31 @@ class _PrefrencesPage5State extends State<PrefrencesPage5> {
           ),
           Center(
             child: SizedBox(
-              height: 170.h, // يمكنك ضبط الارتفاع حسب حجم الصور
+              height: 20.h, // يمكنك ضبط الارتفاع حسب حجم الصور
               width: double.infinity, // يمكنك ضبط العرض أيضًا حسب الحاجة
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
                   Positioned(
-                    left: 30.w, // الصورة الأولى في اليسار
+                    left: 5.w, // الصورة الأولى في اليسار
                     child: const Image(
                       image: AssetImage('assets/images/book5.png'),
                     ),
                   ),
                   Positioned(
-                    left: 100.w, // الصورة الثانية تتداخل قليلاً مع الأولى
+                    left: 30.w, // الصورة الثانية تتداخل قليلاً مع الأولى
                     child: const Image(
                       image: AssetImage('assets/images/book6.png'),
                     ),
                   ),
                   Positioned(
-                    left: 170.w, // الصورة الثالثة تتداخل مع الثانية
+                    left: 50.w, // الصورة الثالثة تتداخل مع الثانية
                     child: const Image(
                       image: AssetImage('assets/images/book7.png'),
                     ),
                   ),
                   Positioned(
-                    left: 240.w, // الصورة الرابعة تتداخل مع الثالثة
+                    right: 5.w, // الصورة الرابعة تتداخل مع الثالثة
                     child: const Image(
                       image: AssetImage('assets/images/book8.png'),
                     ),
@@ -101,14 +101,18 @@ class _PrefrencesPage5State extends State<PrefrencesPage5> {
           const Spacer(
             flex: 2,
           ),
-          CustomButton(
-              onpressed: () {},
-              buttonColor: primaryColor,
-              textStyle: const TextStyle(
-                  color: Colors.white, fontSize: 16, fontFamily: 'IBMPlexSans'),
-              buttonText: 'Continue',
-              borderColor: primaryColor),
-              
+          Container(
+            margin: EdgeInsets.only(right: 5.w, left: 5.w, top: 10.w),
+            child: CustomButton(
+                onpressed: () {},
+                buttonColor: primaryColor,
+                textStyle: TextStyle(
+                    color: Colors.white,
+                    fontSize: 4.w,
+                    fontFamily: 'IBMPlexSans'),
+                buttonText: 'Continue',
+                borderColor: primaryColor),
+          ),
           const Spacer(
             flex: 1,
           ),

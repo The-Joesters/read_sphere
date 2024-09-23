@@ -31,7 +31,7 @@ class _CustomOnboardingScreenState extends State<CustomOnboardingScreen> {
               height: 4.h,
             ),
             SizedBox(
-              height: 12.h,
+              height: 13.h,
               width: 100.w,
               child: Column(
                 children: [

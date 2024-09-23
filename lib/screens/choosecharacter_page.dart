@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:readsphere_ieee/constant/constants.dart';
+import 'package:readsphere_ieee/screens/home.dart';
 import 'package:readsphere_ieee/widgets/custom_character_container.dart';
 import 'package:readsphere_ieee/widgets/custom_prefrences_row.dart';
 import 'package:readsphere_ieee/widgets/custom_button.dart';
@@ -61,7 +63,7 @@ class _ChooseCharacterPageState extends State<ChooseCharacterPage> {
                 ),
               ],
             ),
-            SizedBox(height: 44.h),
+            SizedBox(height: 10.w),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -87,11 +89,13 @@ class _ChooseCharacterPageState extends State<ChooseCharacterPage> {
               flex: 3,
             ),
             CustomButton(
-                onpressed: () {},
+                onpressed: () {
+                  Get.offAll(() => const Home());
+                },
                 buttonColor: primaryColor,
-                textStyle: const TextStyle(
+                textStyle: TextStyle(
                     color: Colors.white,
-                    fontSize: 16,
+                    fontSize: 4.w,
                     fontFamily: 'IBMPlexSans'),
                 buttonText: 'Continue',
                 borderColor: primaryColor),

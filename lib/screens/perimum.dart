@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:readsphere_ieee/constant/color.dart';
 import 'package:readsphere_ieee/constant/images.dart';
 import 'package:readsphere_ieee/screens/aydio_book.dart';
+import 'package:readsphere_ieee/screens/home.dart';
 
 import 'package:screen_go/extensions/responsive_nums.dart';
 
@@ -154,7 +156,9 @@ class Perimum extends StatelessWidget {
               ),
             ),
             btnClick(AppColor.greenColor_2, AppColor.whiteColor_1,
-                AppColor.greenColor_2, () {}, "Continue")
+                AppColor.greenColor_2, () {
+              Get.offAll(() => Home());
+            }, "Continue")
           ],
         ),
       ),

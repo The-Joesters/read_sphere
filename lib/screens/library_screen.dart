@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:readsphere_ieee/constant/constants.dart';
 import 'package:readsphere_ieee/screens/downloadsbooks_screen.dart';
 import 'package:readsphere_ieee/screens/featuredbooks_screen.dart';
+import 'package:readsphere_ieee/screens/perimum.dart';
 import 'package:readsphere_ieee/screens/yourbookmarkes_sreen.dart';
 import 'package:readsphere_ieee/widgets/custom_button.dart';
 import 'package:readsphere_ieee/widgets/custom_library_container.dart';
@@ -39,7 +41,7 @@ class LibraryScreen extends StatelessWidget {
               CustomLibraryTextRow(
                 titleText: "Your bookmarkes",
                 onpressed: () {
-                  Navigator.pushNamed(context, YourbookmarkesSreen.id);
+                  Get.to(() => const YourbookmarkesSreen());
                 },
               ),
               const Row(
@@ -52,7 +54,7 @@ class LibraryScreen extends StatelessWidget {
               CustomLibraryTextRow(
                 titleText: "Featured Books",
                 onpressed: () {
-                  Navigator.pushNamed(context, FeaturedbooksScreen.id);
+                  Get.to(() => const FeaturedbooksScreen());
                 },
               ),
               const Row(
@@ -65,7 +67,7 @@ class LibraryScreen extends StatelessWidget {
               CustomLibraryTextRow(
                 titleText: "Your downloads",
                 onpressed: () {
-                  Navigator.pushNamed(context, DownloadsbooksScreen.id);
+                  Get.to(() => const DownloadsbooksScreen());
                 },
               ),
               const Row(
@@ -76,14 +78,16 @@ class LibraryScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 16.h,
+                height: 2.h,
               ),
               CustomButton(
-                  onpressed: () {},
+                  onpressed: () {
+                    Get.to(() => const Perimum());
+                  },
                   buttonColor: primaryColor,
-                  textStyle: const TextStyle(
+                  textStyle: TextStyle(
                       color: Colors.white,
-                      fontSize: 16,
+                      fontSize: 4.w,
                       fontFamily: 'IBMPlexSans'),
                   buttonText: 'Go premium',
                   borderColor: primaryColor),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:readsphere_ieee/constant/constants.dart';
 import 'package:readsphere_ieee/screens/choosecharacter_page.dart';
 import 'package:readsphere_ieee/widgets/custom_prefrences_row.dart';
@@ -20,7 +21,11 @@ class PreferencesCongratsScreen extends StatelessWidget {
             const Spacer(
               flex: 1,
             ),
-            CustomPrefrencesRow(onpressed: () {}, text: 'Congrats!'),
+            CustomPrefrencesRow(
+                onpressed: () {
+                  Get.back();
+                },
+                text: 'Congrats!'),
             const CustomPrefrencesQuestionText(
                 text:
                     'Book summaries you\'re\n interested in have been saved\n to the Library page!'),
@@ -32,7 +37,7 @@ class PreferencesCongratsScreen extends StatelessWidget {
             ),
             CustomButton(
                 onpressed: () {
-                  Navigator.pushNamed(context, ChooseCharacterPage.id);
+                  Get.to(() => const ChooseCharacterPage());
                 },
                 buttonColor: primaryColor,
                 textStyle: const TextStyle(

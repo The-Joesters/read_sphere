@@ -22,8 +22,8 @@ class CharacterWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 120,
-        width: 120,
+        height: 30.w,
+        width: 30.w,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(8.w),

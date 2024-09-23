@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:readsphere_ieee/constant/constants.dart';
 
-
 import 'package:readsphere_ieee/widgets/custom_prefrences_row.dart';
 import 'package:readsphere_ieee/widgets/custom_prefrencesscreens_text.dart';
 import 'package:readsphere_ieee/widgets/custom_button.dart';
@@ -53,11 +52,11 @@ class _PrefrencesPage3State extends State<PrefrencesPage3> {
                         : const Color(0xff333333),
                     fontFamily: 'IBMPlexSans',
                     fontWeight: FontWeight.w400,
-                    fontSize: 14.w),
+                    fontSize: 4.w),
                 buttonText: "7-day streak",
               ),
               SizedBox(
-                height: 8.h,
+                height: 3.w,
               ),
               CustomButton(
                 onpressed: () {
@@ -76,11 +75,11 @@ class _PrefrencesPage3State extends State<PrefrencesPage3> {
                         : const Color(0xff333333),
                     fontFamily: 'IBMPlexSans',
                     fontWeight: FontWeight.w400,
-                    fontSize: 14.sp),
+                    fontSize: 4.w),
                 buttonText: "14-day streak",
               ),
               SizedBox(
-                height: 8.h,
+                height: 2.h,
               ),
               CustomButton(
                 onpressed: () {
@@ -99,11 +98,11 @@ class _PrefrencesPage3State extends State<PrefrencesPage3> {
                         : const Color(0xff333333),
                     fontFamily: 'IBMPlexSans',
                     fontWeight: FontWeight.w400,
-                    fontSize: 14.sp),
+                    fontSize: 4.w),
                 buttonText: "30-day streak",
               ),
               SizedBox(
-                height: 8.h,
+                height: 2.h,
               ),
               CustomButton(
                 onpressed: () {
@@ -122,7 +121,7 @@ class _PrefrencesPage3State extends State<PrefrencesPage3> {
                         : const Color(0xff333333),
                     fontFamily: 'IBMPlexSans',
                     fontWeight: FontWeight.w400,
-                    fontSize: 14.sp),
+                    fontSize: 4.w),
                 buttonText: "50-day streak",
               ),
             ],
@@ -133,8 +132,10 @@ class _PrefrencesPage3State extends State<PrefrencesPage3> {
                 print(selectedAnswer);
               },
               buttonColor: primaryColor,
-              textStyle: const TextStyle(
-                  color: Colors.white, fontSize: 16, fontFamily: 'IBMPlexSans'),
+              textStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 4.w,
+                  fontFamily: 'IBMPlexSans'),
               buttonText: 'Continue',
               borderColor: primaryColor),
           const Spacer(flex: 1),

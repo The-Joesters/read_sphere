@@ -16,19 +16,22 @@ class _CustomDownloadsContainerState extends State<CustomDownloadsContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8.w),
+      padding: EdgeInsets.all(2.w),
+      margin: EdgeInsets.only(right: 5.w, left: 5.w, top: 2.w, bottom: 2.w),
       width: double.infinity,
-      height: 187.h,
+      height: 20.h,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(6.w)),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           const Image(
             image: AssetImage('assets/images/book1.png'),
           ),
           SizedBox(
-            height: 100.h,
+            width: 3.w,
+          ),
+          SizedBox(
+            height: 15.h,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,14 +43,14 @@ class _CustomDownloadsContainerState extends State<CustomDownloadsContainer> {
                         text: 'Name : ',
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 12.w,
+                            fontSize: 4.w,
                             fontWeight: FontWeight.w500),
                       ),
                       TextSpan(
                         text: 'John donne',
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 12.sp,
+                            fontSize: 4.w,
                             fontWeight: FontWeight.w400),
                       ),
                     ],
@@ -60,14 +63,14 @@ class _CustomDownloadsContainerState extends State<CustomDownloadsContainer> {
                         text: 'Number of pages : ',
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 12.sp,
+                            fontSize: 4.w,
                             fontWeight: FontWeight.w500),
                       ),
                       TextSpan(
                         text: '594 pages',
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 12.sp,
+                            fontSize: 4.w,
                             fontWeight: FontWeight.w400),
                       ),
                     ],
@@ -79,19 +82,19 @@ class _CustomDownloadsContainerState extends State<CustomDownloadsContainer> {
                       'Rate : ',
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 12.sp,
+                          fontSize: 4.w,
                           fontWeight: FontWeight.w500),
                     ),
                     PannableRatingBar(
                       rate: rating,
                       items: List.generate(
                           5,
-                          (index) => const RatingWidget(
+                          (index) => RatingWidget(
                                 selectedColor: Colors.yellow,
                                 unSelectedColor: Colors.grey,
                                 child: Icon(
                                   Icons.star,
-                                  size: 24,
+                                  size: 5.w,
                                 ),
                               )),
                       onChanged: (value) {

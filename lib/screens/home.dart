@@ -9,7 +9,6 @@ import 'package:readsphere_ieee/constant/color.dart';
 import 'package:readsphere_ieee/constant/images.dart';
 import 'package:readsphere_ieee/controller/home_controller.dart';
 
-
 import 'package:screen_go/extensions/responsive_nums.dart';
 
 class Home extends StatelessWidget {
@@ -105,8 +104,8 @@ class Home extends StatelessWidget {
                     color: color,
                   )
                 : Container(
-                    width: 7.w,
-                    height: 7.w,
+                    width: 6.w,
+                    height: 6.w,
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(image: img, fit: BoxFit.fill)),
@@ -115,7 +114,7 @@ class Home extends StatelessWidget {
             Text(
               text,
               style: GoogleFonts.ibmPlexSans(
-                  color: color, fontWeight: FontWeight.w500, fontSize: 2.5.w),
+                  color: color, fontWeight: FontWeight.w500, fontSize: 3.w),
             )
           ],
         ),

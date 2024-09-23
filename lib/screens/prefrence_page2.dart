@@ -8,6 +8,7 @@ import 'package:readsphere_ieee/widgets/customcheckbox_list.dart';
 import 'package:readsphere_ieee/widgets/custom_prefrences_row.dart';
 import 'package:readsphere_ieee/widgets/custom_prefrencesscreens_text.dart';
 import 'package:readsphere_ieee/widgets/custom_button.dart';
+import 'package:screen_go/extensions/responsive_nums.dart';
 
 class PrefrencePage2 extends StatefulWidget {
   PrefrencePage2({super.key});
@@ -34,44 +35,46 @@ class _PrefrencePage2State extends State<PrefrencePage2> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SizedBox(
-        width: double.infinity,
-        child: Column(
-          children: [
-            CustomPrefrencesRow(
-              onpressed: () {
-                Get.back();
-              },
-              text: 'what are your goals? ',
-            ),
-            const CustomPrefrencesQuestionText(
-              text: "Choose up to 3 goals for more precise\n personalization",
-            ),
-            CustomcheckboxList(
-              isChecked: isCheckedPage2,
-              texts: page2Texts,
-              onSelectedOptionsChanged: (p0) {
-                setState(() {
-                  selectedAnswers = p0;
-                });
-              },
-            ),
-            const Spacer(flex: 2),
-            CustomButton(
+    return SizedBox(
+      width: double.infinity,
+      child: ListView(
+        shrinkWrap: true,
+        children: [
+          CustomPrefrencesRow(
+            onpressed: () {
+              Get.back();
+            },
+            text: 'what are your goals? ',
+          ),
+          const CustomPrefrencesQuestionText(
+            text: "Choose up to 3 goals for more precise\n personalization",
+          ),
+          CustomcheckboxList(
+            isChecked: isCheckedPage2,
+            texts: page2Texts,
+            onSelectedOptionsChanged: (p0) {
+              setState(() {
+                selectedAnswers = p0;
+              });
+            },
+          ),
+          const Spacer(flex: 2),
+          Container(
+            margin: EdgeInsets.only(right: 5.w, left: 5.w),
+            child: CustomButton(
                 onpressed: () {
                   print(selectedAnswers);
                 },
                 buttonColor: primaryColor,
-                textStyle: const TextStyle(
+                textStyle: TextStyle(
                     color: Colors.white,
-                    fontSize: 16,
+                    fontSize: 4.w,
                     fontFamily: 'IBMPlexSans'),
                 buttonText: 'Continue',
                 borderColor: primaryColor),
-            const Spacer(flex: 1),
-          ],
-        ),
+          ),
+          const Spacer(flex: 1),
+        ],
       ),
     );
   }

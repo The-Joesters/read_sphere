@@ -5,12 +5,11 @@ import 'package:readsphere_ieee/screens/home_page.dart';
 import 'package:readsphere_ieee/screens/library_screen.dart';
 import 'package:readsphere_ieee/screens/profile.dart';
 
-
 class HomeController extends GetxController {
   int currentIndex = 0;
   List pages = [
     const HomePage(),
-   const LibraryScreen(),
+    const LibraryScreen(),
     const Challenge(),
     const Profile()
   ];

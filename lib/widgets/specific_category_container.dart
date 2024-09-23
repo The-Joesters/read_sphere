@@ -20,11 +20,11 @@ class _SpecificCategoryContainerState extends State<SpecificCategoryContainer> {
     return Stack(
       children: [
         Container(
-          margin: EdgeInsets.all(8.w),
+          margin: EdgeInsets.only(right: 5.w, left: 5.w, top: 3.w),
           width: double.infinity,
-          height: 187.h,
+          height: 25.h,
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(6.w)),
+              color: Colors.white, borderRadius: BorderRadius.circular(3.w)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -32,8 +32,12 @@ class _SpecificCategoryContainerState extends State<SpecificCategoryContainer> {
                 image: AssetImage('assets/images/book1.png'),
               ),
               Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  SizedBox(
+                    height: 5.w,
+                  ),
                   RichText(
                     text: TextSpan(
                       children: [
@@ -41,18 +45,21 @@ class _SpecificCategoryContainerState extends State<SpecificCategoryContainer> {
                           text: 'Name : ',
                           style: TextStyle(
                               color: Colors.black,
-                              fontSize: 12.sp,
+                              fontSize: 4.w,
                               fontWeight: FontWeight.w500),
                         ),
                         TextSpan(
                           text: 'John donne',
                           style: TextStyle(
                               color: Colors.black,
-                              fontSize: 12.sp,
+                              fontSize: 4.w,
                               fontWeight: FontWeight.w400),
                         ),
                       ],
                     ),
+                  ),
+                  SizedBox(
+                    height: 5.w,
                   ),
                   RichText(
                     text: TextSpan(
@@ -61,18 +68,21 @@ class _SpecificCategoryContainerState extends State<SpecificCategoryContainer> {
                           text: 'Number of pages : ',
                           style: TextStyle(
                               color: Colors.black,
-                              fontSize: 12.sp,
+                              fontSize: 4.w,
                               fontWeight: FontWeight.w500),
                         ),
                         TextSpan(
                           text: '594 pages',
                           style: TextStyle(
                               color: Colors.black,
-                              fontSize: 12.sp,
+                              fontSize: 4.w,
                               fontWeight: FontWeight.w400),
                         ),
                       ],
                     ),
+                  ),
+                  SizedBox(
+                    height: 5.w,
                   ),
                   Row(
                     children: [
@@ -80,19 +90,19 @@ class _SpecificCategoryContainerState extends State<SpecificCategoryContainer> {
                         'Rate : ',
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 12.sp,
+                            fontSize: 4.w,
                             fontWeight: FontWeight.w500),
                       ),
                       PannableRatingBar(
                         rate: rating,
                         items: List.generate(
                             5,
-                            (index) => const RatingWidget(
+                            (index) => RatingWidget(
                                   selectedColor: Colors.yellow,
                                   unSelectedColor: Colors.grey,
                                   child: Icon(
                                     Icons.star,
-                                    size: 24,
+                                    size: 5.w,
                                   ),
                                 )),
                         onChanged: (value) {
@@ -104,14 +114,17 @@ class _SpecificCategoryContainerState extends State<SpecificCategoryContainer> {
                     ],
                   ),
                   SizedBox(
-                    width: 192.w,
-                    height: 32.h,
+                    height: 10.w,
+                  ),
+                  SizedBox(
+                    width: 50.w,
+                    height: 5.h,
                     child: CustomButton(
                         onpressed: () {},
                         buttonColor: primaryColor,
-                        textStyle: const TextStyle(
+                        textStyle: TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 4.w,
                             fontFamily: 'IBMPlexSans'),
                         buttonText: widget.buttonText!,
                         borderColor: primaryColor),
@@ -123,7 +136,7 @@ class _SpecificCategoryContainerState extends State<SpecificCategoryContainer> {
         ),
         Positioned(
           right: 5.w,
-          top: 5.h,
+          top: 2.h,
           child: IconButton(
               onPressed: () {},
               icon: const Icon(

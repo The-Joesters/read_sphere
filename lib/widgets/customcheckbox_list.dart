@@ -42,19 +42,19 @@ class _CustomcheckboxListState extends State<CustomcheckboxList> {
         children: List.generate(widget.texts.length, (index) {
           return Container(
             width: double.infinity,
-            height: 48.h,
-            margin: EdgeInsets.symmetric(vertical: 4.h),
-            padding: const EdgeInsets.all(10),
+            height: 6.h,
+            margin: EdgeInsets.symmetric(vertical: 5.w),
+            padding: EdgeInsets.all(1.w),
             decoration: BoxDecoration(
                 color: secondaryColor,
-                borderRadius: BorderRadius.circular(8.w),
+                borderRadius: BorderRadius.circular(5.w),
                 border: Border.all(color: const Color(0xff666666), width: 1)),
             child: Row(
               children: [
                 Text(
                   widget.texts[index],
                   style: TextStyle(
-                      fontSize: 16.w,
+                      fontSize: 4.w,
                       fontWeight: FontWeight.w400,
                       fontFamily: 'IBMPlexSans'),
                 ),

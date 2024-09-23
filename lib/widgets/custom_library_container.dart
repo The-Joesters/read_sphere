@@ -7,8 +7,8 @@ class CustomLibraryContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 238.h,
-      width: 164.w,
+      height: 30.h,
+      width: 45.w,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(6.w)),
       child: Column(
@@ -28,7 +28,7 @@ class CustomLibraryContainer extends StatelessWidget {
                   text: 'title : ',
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 12.sp,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.w500),
                 ),
                 TextSpan(
@@ -36,7 +36,7 @@ class CustomLibraryContainer extends StatelessWidget {
                   style: TextStyle(
                       overflow: TextOverflow.ellipsis,
                       color: Colors.black,
-                      fontSize: 12.sp,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.w400),
                 ),
               ],
@@ -49,14 +49,14 @@ class CustomLibraryContainer extends StatelessWidget {
                   text: 'Time : ',
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 12.sp,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.w500),
                 ),
                 TextSpan(
                   text: '10 min',
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 12.sp,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.w400),
                 ),
               ],

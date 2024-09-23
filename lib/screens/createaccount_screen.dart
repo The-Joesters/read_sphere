@@ -133,9 +133,9 @@ class _CreateaccountScreenState extends State<CreateaccountScreen> {
                     ),
                     CustomButton(
                         onpressed: () {
-                          if (formKey.currentState!.validate()) {
-                            Get.to(() => PrefrencesScreens());
-                          }
+                          // if (formKey.currentState!.validate()) {
+                          Get.to(() => PrefrencesScreens());
+                          //   }
                         },
                         buttonColor: primaryColor,
                         textStyle: TextStyle(

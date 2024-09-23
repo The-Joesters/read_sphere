@@ -5,17 +5,19 @@ import 'package:get/get.dart';
 import 'package:readsphere_ieee/screens/splash.dart';
 import 'package:screen_go/screen_go.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 SharedPreferences? sharedPreferences;
 
-void main() async{
-WidgetsFlutterBinding.ensureInitialized();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   sharedPreferences = await SharedPreferences.getInstance();
   runApp(
     DevicePreview(
-      enabled: !kReleaseMode, // Enable in debug mode only
+      enabled: false, // Enable in debug mode only
       builder: (context) => const ReadSphere(), // Your app widget
     ),
-  );}
+  );
+}
 
 class ReadSphere extends StatelessWidget {
   const ReadSphere({super.key});

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:readsphere_ieee/constant/constants.dart';
 
-
 import 'package:readsphere_ieee/widgets/specific_category_container.dart';
 
 class YourbookmarkesSreen extends StatelessWidget {
@@ -30,7 +29,8 @@ class YourbookmarkesSreen extends StatelessWidget {
           ],
         ),
         body: ListView.builder(
-            itemCount: 10,
+            padding: EdgeInsets.zero,
+            itemCount: 5,
             itemBuilder: (context, index) {
               return const SpecificCategoryContainer(
                 buttonText: "Continue read",
